@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>수족관 확인하기</title>
+    <!-- css -->
+    
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/dokk_basic.css">
+    <link rel="stylesheet" href="../css/dokk_sub02_a.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- w3 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- chart -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>	
+</head>
+<body>
+     <!-- header -->
+     <header id="basic">
+        <div class="top-bar">
+            <div class="wrap clear">
+                <ul class="topbar-left clear">
+                    <li><a href="../sub/sub01.html">
+                        <img src="../img/common/farm_logo_01.png" class="farm_logo img" alt="farm_logo"/>
+                    </a></li>
+                    <li><a href="../sub/sub01_a.html">
+                        <img src="../img/common/aqua_logo_01.png" class="aqua_logo img" alt="aqua_logo"/>
+                    </a></li>
+                </ul>
+                <ul class="topbar-right clear">
+                    <li><a href="http://dokk.kr/shop/personalpay.php">개인결제</a></li>
+                    <li><a href="http://dokk.kr/bbs/qalist.php">1:1문의</a></li>
+                    <li><a href="http://dokk.kr/bbs/faq.php">자주하는 질문</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-title">
+            <ul class="wrap clear">
+                <li class="logos">
+                    <a href="../main/main.html">
+                        <img src="../img/common/dm_logo_01.png" class="img logo" alt="farm_logo"/>
+                    </a>
+                </li>
+                <li class="searchs">
+                    <form name="frmsearch1" action="/shop/search.php" onsubmit="return search_submit(this);">
+                        <input type="text" name="q" value="" id="sch_str" required>
+                        <button type="submit" id="sch_submit"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only"></span></button>
+                    </form>
+                    <script>
+                        function search_submit(f) {
+                            if (f.q.value.length < 2) {
+                                alert("검색어는 두글자 이상 입력하십시오.");
+                                f.q.select();
+                                f.q.focus();
+                                return false;
+                            }
+                            return true;
+                        }
+                    </script>
+                </li>
+                <li class="logins clear">
+                    <div><a href="http://dokk.kr/bbs/login.php?url=%2Fshop%2F"><b>로그인</b></a></div>  
+					<div><a href="http://dokk.kr/bbs/register.php">회원가입</a></div>
+                    <div class="tnb_cart">
+                        <a href="/shop/cart.php">
+                            <span class="fa fa-shopping-basket"></span>
+                            <span class="w3-badge">0</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- 내역확인 시작 -->
+    <section class="farm wrap">
+
+        <h3>
+            <img src="../img/sub_page/aqua.png" class="img" alt="aqua"/>
+            네모 수족관
+        </h3>
+        <div class="farm_info">
+            <img src="../img/sub_page/notice_02_a.jpg" class="img" alt="farm_info"/>
+        </div>
+        
+         <!-- 나무 내역 -->
+        <ul class="my_farm clear">
+           <div>
+
+                <table valign="top">
+                        <colgroup>
+                            <col width="50" />
+                            <col width="50" />
+                            <col width="200" />
+                            <col width="70" />
+                            <col width="70" />
+                            <col width="40" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><div>마리</div></th>
+                                <th scope="col"><div>나의 수족관</div></th>
+                                <th scope="col"><div>물고기(원)</div></th>
+                                <th scope="col"><div>수확여부</div></th>
+                                <th scope="col"><div>수확가능여부</div></th>
+                                <th scope="col"><div>&nbsp;</div></th>
+                            </tr>
+                        </thead>
+                        <today>
+                            <tr>
+                                <td><span>1</span>마리</td>
+                                <td><img src="../img/sub_page/fish.png" class="img" alt="my_fish"/></td>
+                                <td class="td_left">
+                                    <p><span>0</span> 열매</p>
+                                    <p>(현재: <span>0</span>원)</p>
+                                </td>
+                                <td><span>0</span> 수확</td>
+                                <td><span>수확불가</span></td>
+                                <td>정상</td>
+                            </tr>
+                             <tr>
+                                 <td><span>2</span>마리</td>
+                                <td><img src="../img/sub_page/fish.png" class="img" alt="my_fish"/></td>
+                                <td class="td_left">
+                                    <p><span>0</span> 열매</p>
+                                    <p>(현재: <span>0</span>원)</p>
+                                </td>
+                                <td><span>0</span> 수확</td>
+                                <td><span>수확불가</span></td>
+                                <td>정상</td>
+                            </tr>
+                            <tr>
+                                <td><span>3</span>마리</td>
+                                <td><img src="../img/sub_page/fish.png" class="img" alt="my_fish"/></td>
+                                <td class="td_left">
+                                    <p><span>0</span> 열매</p>
+                                    <p>(현재: <span>0</span>원)</p>
+                                </td>
+                                <td><span>0</span> 수확</td>
+                                <td><span>수확불가</span></td>
+                                <td>정상</td>
+                            </tr>
+                             <tr>
+                                 <td><span>4</span>마리</td>
+                                <td><img src="../img/sub_page/fish.png" class="img" alt="my_fish"/></td>
+                                <td class="td_left">
+                                    <p><span>0</span> 열매</p>
+                                    <p>(현재: <span>0</span>원)</p>
+                                </td>
+                                <td><span>0</span> 수확</td>
+                                <td><span>수확불가</span></td>
+                                <td>정상</td>
+                            </tr>
+                            <tr>
+                                <td><span>5</span>마리</td>
+                                <td><img src="../img/sub_page/fish.png" class="img" alt="my_fish"/></td>
+                                <td class="td_left">
+                                    <p><span>0</span> 열매</p>
+                                    <p>(현재: <span>0</span>원)</p>
+                                </td>
+                                <td><span>0</span> 수확</td>
+                                <td><span>수확불가</span></td>
+                                <td>정상</td>
+                            </tr>
+                        </today>
+                    </table>
+            </div>
+        </ul>
+        
+       
+    </section>
+    <!-- 내역확인 끝 -->
+
+
+    <!-- footer -->
+    <footer id="basic" class="wrap clear">
+        <ul class="foot_top clear">
+            <h4>고객센터</h4>
+            <li>
+                <p>전화문의(02-6952-8172)</p>
+                <p><strong>평일</strong> 월-금 am 09:00 - pm 06:00</p>
+                <p><strong>점심시간</strong> am 12:00 - pm 01:00</p>
+            </li>
+            <li>
+                <p><a href="http://dokk.kr/bbs/qalist.php">1:1 문의 <span class="fa fa-angle-right"></span></a></p>
+                <p>궁금한 점이 있으신가요?</p>
+                <p>1:1 문의에 남겨주시면 친절히 상담해 드리겠습니다.</p>
+            </li>
+        </ul>
+        <ul class="foot_bott clear">
+            <li><a href="http://dokk.kr/bbs/content.php?co_id=company">도깨비방망이 소개</a></li>
+            <li>이용안내</li>
+            <li><a href="http://dokk.kr/bbs/content.php?co_id=provision">서비스이용약관</a></li>
+            <li><a href="http://dokk.kr/bbs/content.php?co_id=privacy">개인정보처리방침</a></li>
+            <li><a href="http://dokk.kr/shop/item.php?it_id=1547898341&amp;device=mobile">모바일버전</a></li>
+            <div class="foot_txt">
+                <p>회사명 : 주식회사 도깨비방망이</p>
+                <p>대표자 : 김영수</p>
+                <p>개인정보보호책임자 : 강종민</p>
+                <p>통신판배업자신고번호 : 제 2019-서울강남</p>
+                <p>부가통신사업신고번호 : 00084호</p>
+                <br/>
+                <p>팩스 : 070-4866-0993</p>
+                <p>전화 : 02-6952-8172</p>
+                <p>주소 : 서울시 강남구 강남대로94길 70 3층</p> </br/>
+                <p>
+                    Copyright © 2019 주식회사 도깨비방망이.
+                    All Rights Reserved.
+                </p>
+            </div>
+            <div class="foot_copy">
+                <div class="foot_logo">
+                    <a href="../main/main.html">
+                        <img src="../img/common/dm_logo_bk.png" class="img foot_logo" alt="foot_logo"/>
+                    </a>
+                </div>
+            </div>
+        </ul>
+        
+    </footer>
+
+    <div class="side_area">
+        <div class="sns_area">
+            <div class="facebook"><a href="https://www.facebook.com/%EB%8F%84%EA%B9%A8%EB%B9%84%EB%AA%B0-2192639774381592/notifications/" target=_blank>
+                <img src="../img/sns/icon_sns_facebook2.png" class="img" alt="facebook"/>
+            </a></div>
+            <div class="youtube"><a href="https://www.youtube.com/channel/UCJtUIHklatYxvFc0Yj_F9Iw?view_as=subscriber" target=_blank>
+                <img src="../img/sns/icon_sns_youtube.png" class="img" alt="youtube"/>
+            </a></div>
+            <div class="instagram"><a href="https://www.instagram.com/dokkmallcom/" target=_blank>
+                <img src="../img/sns/icon_sns_insta2.png" class="img" alt="instagram"/>
+            </a></div>
+            <div class="blog"><a href="https://blog.naver.com/dokkkr" target=_blank>
+                <img src="../img/sns/icon_sns_blog.png" class="img" alt="blog"/>
+            </a></div>
+        </div>
+    </div>
+
+    <script src="../js/swiper.js"></script>
+    <script src="../js/dokk_basic.js"></script>
+    <script src="../js/dokk_sub01.js"></script>
+    
+    
+</body>
+</html>
